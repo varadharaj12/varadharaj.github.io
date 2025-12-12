@@ -6,7 +6,7 @@
   <title>Varadharaj S — Junior Network Engineer</title>
   <style>
     :root{--accent:#0b69ff;--bg:#0f1720;--card:#0b1220;--muted:#9aa4b2}
-    *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#071127 0%,#081022 100%);color:#e6eef6;line-height:1.5}
+    *{box-sizing:border-box}body{Margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#071127 0%,#081022 100%);color:#e6eef6;line-height:1.5}
     .wrap{max-width:980px;margin:36px auto;padding:28px}
     header{display:flex;gap:20px;align-items:center}
     .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#00c2ff);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:#021021}
@@ -109,7 +109,66 @@
       </aside>
     </div>
 
-    <footer>
+    <section class="card section" id="labs" style="margin-top:16px">
+  <h2>Lab Portfolio — Detailed Work & Downloads</h2>
+
+  <p style="color:var(--muted)">Below are curated lab projects showing topology snapshots, short summaries, technologies used, and downloadable files (configs, .unl, VM images). Click "View Details" for step-by-step setup and verification commands.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:14px">
+
+    <div class="card" style="padding:12px">
+      <h3>Cisco SD‑WAN Full Deployment</h3>
+      <p style="color:var(--muted);margin:6px 0">vManage/vSmart/vBond setup, vEdge CSR onboarding, certificates, OMP verification and policy templates.</p>
+      <p class="meta" style="margin:4px 0;color:var(--muted)"><strong>Tech:</strong> vManage, CSR1000v, IPsec, OMP</p>
+      <p style="margin-top:8px"><a class="btn" href="labs/sdwan/index.html">View Details</a> <a style="margin-left:8px" class="textlink" href="labs/sdwan/sdwan-topology.png">Topology</a></p>
+    </div>
+
+    <div class="card" style="padding:12px">
+      <h3>Cisco ISE 802.1X Authentication</h3>
+      <p style="color:var(--muted);margin:6px 0">Wired 802.1X, MAB fallback, AD integration, authorization policies and Live Log troubleshooting.</p>
+      <p class="meta" style="margin:4px 0;color:var(--muted)"><strong>Tech:</strong> Cisco ISE, RADIUS, AD</p>
+      <p style="margin-top:8px"><a class="btn" href="labs/ise/index.html">View Details</a> <a style="margin-left:8px" class="textlink" href="labs/ise/ise-topology.png">Topology</a></p>
+    </div>
+
+    <div class="card" style="padding:12px">
+      <h3>DNAC Automation & Assurance</h3>
+      <p style="color:var(--muted);margin:6px 0">Device discovery, template deployment, assurance troubleshooting and sample scripts for automation.</p>
+      <p class="meta" style="margin:4px 0;color:var(--muted)"><strong>Tech:</strong> Cisco DNA Center, CLI Templates, REST</p>
+      <p style="margin-top:8px"><a class="btn" href="labs/dnac/index.html">View Details</a> <a style="margin-left:8px" class="textlink" href="labs/dnac/dnac-screens.png">Screens</a></p>
+    </div>
+
+    <div class="card" style="padding:12px">
+      <h3>Nexus VXLAN EVPN Fabric</h3>
+      <p style="color:var(--muted);margin:6px 0">OSPF underlay, BGP EVPN overlay, VTEP/VNI configuration for multi-tenant segmentation.</p>
+      <p class="meta" style="margin:4px 0;color:var(--muted)"><strong>Tech:</strong> Nexus 9000v, EVPN, OSPF, BGP</p>
+      <p style="margin-top:8px"><a class="btn" href="labs/evpn/index.html">View Details</a> <a style="margin-left:8px" class="textlink" href="labs/evpn/evpn-topology.png">Topology</a></p>
+    </div>
+
+  </div>
+
+  <h3 style="margin-top:14px">How I present each lab (suggested contents)</h3>
+  <ul style="color:var(--muted);margin:8px 0 0 18px">
+    <li><strong>Overview:</strong> What the lab demonstrates and real-world use-case.</li>
+    <li><strong>Topology Image:</strong> PNG/SVG screenshot of the topology.</li>
+    <li><strong>Files to download:</strong> startup-configs, .unl/.zip, VM export, scripts, and test pcap if applicable.</li>
+    <li><strong>Step-by-step Guide:</strong> Exact commands and GUI steps to build the lab from scratch.</li>
+    <li><strong>Verification:</strong> Commands and expected outputs (ping, OMP routes, ISE logs).</li>
+    <li><strong>Notes & Troubleshooting:</strong> Known pitfalls and quick fixes.</li>
+  </ul>
+
+  <h3 style="margin-top:12px">How to add new lab pages and files</h3>
+  <ol style="color:var(--muted);margin:8px 0 0 18px">
+    <li>Create a folder under <code>labs/</code> (e.g. <code>labs/sdwan/</code>).</li>
+    <li>Add an <code>index.html</code> inside that folder with detailed steps and screenshots.</li>
+    <li>Place topology images and downloadable files in the same folder (example: <code>sdwan-topology.png</code>, <code>configs.zip</code>).</li>
+    <li>Link the detail page from the main portfolio card (like the "View Details" button above).</li>
+    <li>Commit and push to GitHub — your Pages site will serve these files automatically.</li>
+  </ol>
+
+  <p style="color:var(--muted);margin-top:8px">If you want, I can create the first detailed lab page for any one of the labs above (SD‑WAN / ISE / EVPN / DNAC) — just tell me which lab and I will generate a ready-to-upload <code>index.html</code>, topology images, and a <code>configs.zip</code> with sample startup configs.</p>
+</section>
+
+<footer>
       Built by Varadharaj S — Junior Network Engineer • Made with ❤️
     </footer>
   </div>
