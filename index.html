@@ -3,85 +3,96 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Varadharaj S — Junior Network Engineer</title>
+  <title>Varadharaj S — Network Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--accent:#0b69ff;--bg:#0f1720;--card:#0b1220;--muted:#9aa4b2}
-    *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#071127 0%,#081022 100%);color:#e6eef6;line-height:1.5}
-    .wrap{max-width:980px;margin:36px auto;padding:28px}
+    :root{--accent:#0b69ff;--muted:#697680;--card:#ffffff0f;--bg:#0b1220}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#071127 0%,#081022 100%);color:#eaf2ff;line-height:1.5;-webkit-font-smoothing:antialiased}
+    .container{max-width:980px;margin:36px auto;padding:28px}
     header{display:flex;gap:20px;align-items:center}
-    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#00c2ff);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:#021021}
-    h1{margin:0;font-size:24px}
-    p.lead{margin:6px 0;color:var(--muted)}
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:20px}
+    .avatar{width:96px;height:96px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#00c2ff);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:36px;color:#021021}
+    h1{margin:0;font-size:26px}
+    p.lead{margin:6px 0;color:var(--muted);font-size:15px}
+    nav{margin-left:auto}
+    nav a{color:var(--muted);text-decoration:none;margin-left:12px;font-weight:600}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:24px}
     .card{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
     .section h2{margin:0 0 10px 0;font-size:16px}
     .skills{display:flex;flex-wrap:wrap;gap:8px}
     .skill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:13px;color:var(--muted)}
-    .project{margin-bottom:12px}
+    .project{margin-bottom:14px}
     .project h3{margin:0;font-size:15px}
     .project p{margin:6px 0;color:var(--muted);font-size:14px}
     .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:600}
     footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
+    .meta{color:var(--muted);font-size:13px}
     a.textlink{color:#a8d7ff;text-decoration:none}
-    @media(max-width:880px){.grid{grid-template-columns:1fr}.wrap{padding:18px}}
+    @media(max-width:880px){.grid{grid-template-columns:1fr}.container{padding:18px}.avatar{width:78px;height:78px;font-size:24px}}
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <div class="container">
     <header>
       <div class="avatar">VS</div>
       <div>
         <h1>Varadharaj S</h1>
         <div class="lead">Junior Network Engineer • System Administrator • Lab Engineer</div>
-        <div style="margin-top:8px"><a class="btn" href="#contact">Contact / Download Resume</a></div>
+        <div class="meta">Salem, Tamil Nadu • <a class="textlink" href="mailto:selvamvgsnh@gmail.com">selvamvgsnh@gmail.com</a></div>
       </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="btn">Contact</a>
+      </nav>
     </header>
 
     <div class="grid">
       <main>
-        <section class="card section">
+        <section class="card section" id="about">
           <h2>About</h2>
-          <p style="color:var(--muted)">I build and troubleshoot network & virtualization labs using Cisco technologies (SD‑WAN, ISE, DNAC, Nexus EVPN) and manage VMware ESXi hosts. I enjoy converting complex designs into working lab topologies and documenting step-by-step configurations for hands-on testing.</p>
+          <p style="color:var(--muted)">I design, build and troubleshoot Cisco-based lab and production networks. Hands-on experience with SD‑WAN (vManage/vSmart), Cisco ISE (802.1X/RADIUS), Nexus VXLAN EVPN, virtualization on ESXi, and unified communications. I convert designs into working topologies for testing and validation.</p>
         </section>
 
-        <section class="card section" style="margin-top:16px">
+        <section class="card section" id="projects" style="margin-top:16px">
           <h2>Selected Projects</h2>
 
           <div class="project">
             <h3>Cisco SD‑WAN Deployment & Policy Configuration</h3>
-            <p>Onboarded vEdge/CSR routers, configured control-plane and IPsec tunnels, deployed device templates and routing policies. Verified site-to-site connectivity using vManage monitoring tools.</p>
+            <p>Onboarded vEdge/CSR routers, configured control-plane and IPsec tunnels, built device templates, deployed routing policies and validated OMP channels using vManage.</p>
           </div>
 
           <div class="project">
             <h3>Cisco ISE 802.1X Authentication Lab</h3>
-            <p>Integrated ISE with Active Directory, created authentication and authorization policies, and validated wired 802.1X with switch integration and RADIUS logs.</p>
+            <p>Integrated ISE with Active Directory, configured RADIUS and authorization policies, implemented 802.1X/MAB, and validated access through live logs.</p>
           </div>
 
           <div class="project">
-            <h3>Cisco DNA Center — Device Onboarding & Assurance</h3>
-            <p>Discovered network devices, deployed CLI templates, and used Assurance to troubleshoot client and device health in a virtual lab environment.</p>
-          </div>
-
-          <div class="project">
-            <h3>VMware ESXi Lab & Server Administration</h3>
-            <p>Deployed ESXi hosts, managed VMs for ISE, DNAC, CUCM, and performed resource tuning, snapshots, and backup workflows.</p>
+            <h3>Nexus 9000v VXLAN EVPN Fabric</h3>
+            <p>Built OSPF underlay and BGP EVPN overlay with VTEPs and VNIs for multi-tenant segmentation and endpoint mobility testing.</p>
           </div>
 
         </section>
 
         <section class="card section" style="margin-top:16px">
-          <h2>Experience Highlights</h2>
+          <h2>Experience</h2>
+          <p class="meta">Network Administrator — Anmol Technologies (Jan 2025 - Present)</p>
           <ul style="color:var(--muted);margin:8px 0 0 18px">
-            <li>System Administrator — Shriram Finance (support, server & VM management)</li>
-            <li>Lab Engineer — multiple Cisco PNETLab / GNS3 topologies</li>
-            <li>Hands-on with routing protocols (OSPF, EIGRP), VLANs, ACLs, NAT, GRE</li>
+            <li>Manage lab infrastructure, ESXi VMs, and network topologies for testing.</li>
+            <li>Support network troubleshooting, device onboarding, and documentation.</li>
+          </ul>
+
+          <p class="meta" style="margin-top:10px">Customer Support Executive — Shriram Finance (Sep 2024 - Dec 2024)</p>
+          <ul style="color:var(--muted);margin:8px 0 0 18px">
+            <li>Handled customer queries and improved issue resolution processes.</li>
           </ul>
         </section>
 
       </main>
 
       <aside>
-        <div class="card section">
+        <div class="card section" id="skills">
           <h2>Skills</h2>
           <div class="skills" style="margin-top:8px">
             <div class="skill">Cisco SD‑WAN</div>
@@ -97,14 +108,15 @@
 
         <div class="card section" style="margin-top:16px">
           <h2>Contact</h2>
-          <p style="color:var(--muted);margin:8px 0">Email: <a href="mailto:selvamvgnsh@gmail.com" class="textlink">selvamvgnsh@gmail.com</a></p>
-          <p style="margin:8px 0"><a class="btn" href="Varadharaj_Network_Engineer_Resume.pdf" download>Download Resume</a></p>
+          <p class="meta">Email: <a href="mailto:selvamvgsnh@gmail.com" class="textlink">selvamvgsnh@gmail.com</a></p>
+          <p style="margin-top:8px"><a class="btn" href="Varadharaj_Network_Engineer_Resume.pdf" download>Download Resume</a></p>
+          <p style="margin-top:10px;color:var(--muted)">LinkedIn: <a class="textlink" href="https://www.linkedin.com/in/varadharaj1230/" target="_blank">/in/varadharaj1230</a></p>
         </div>
 
         <div class="card section" style="margin-top:16px">
           <h2>Quick Links</h2>
-          <p style="color:var(--muted);margin:8px 0"><a class="textlink" href="https://www.linkedin.com/in/varadharaj1230/" target="_blank">LinkedIn Profile ↗</a></p>
-          <p style="color:var(--muted);margin:8px 0"><a class="textlink" href="#">GitHub / Lab Files</a></p>
+          <p style="color:var(--muted);margin:8px 0"><a class="textlink" href="https://github.com/varadharaj12">GitHub</a></p>
+          <p style="color:var(--muted);margin:8px 0"><a class="textlink" href="https://varadharaj12.github.io">Portfolio (root)</a></p>
         </div>
       </aside>
     </div>
